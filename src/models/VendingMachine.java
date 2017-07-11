@@ -1,11 +1,12 @@
 package models;
 
 import java.util.List;
+import java.util.Set;
 
 public interface VendingMachine extends SupplierDemands {
-    List<Product> getAvailableProducts();
+    Set<Product> getAvailableProducts();
 
-    int selectProducts(List<String> name, List<Integer> quantity);
+    int selectProducts(List<Product> products, List<Integer> quantity);
 
     void pay(List<Coin> cash);
 

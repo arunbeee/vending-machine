@@ -13,14 +13,15 @@ public class Supplier implements SupplierDemands {
     }
 
     @Override
-    public void changeQuantity(Product prod) {
+    public void changeQuantity(Product prod, Integer quantity) {
 
     }
 
     @Override
-    public void setPrice(Product prod) {
+    public void setPrice(Product oldProd, Product newProduct) {
 
     }
+
 
     @Override
     public void reset() {

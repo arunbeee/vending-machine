@@ -22,4 +22,8 @@ public class DispensingState implements State {
     public void dispense() throws RuntimeException {
         machine.setMachineState(machine.getNoCoinInsertedState());
     }
+
+    public void alter() throws RuntimeException {
+        throw new RuntimeException(CustomException.PAYMENT_IN_PROGRESS.getMessage());
+    }
 }

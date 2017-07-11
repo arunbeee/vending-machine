@@ -1,6 +1,7 @@
 package models;
 
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Inventory<T> {
@@ -11,6 +12,10 @@ public class Inventory<T> {
         return value == null ? 0 : value;
     }
 
+    public Set<T> getItems() {
+        return inventory.keySet();
+    }
+
     public void add(T item) {
         int count = getQuantity(item);
         put(item, count + 1);
@@ -19,7 +24,11 @@ public class Inventory<T> {
     public void deduct(T item) {
         if (hasItem(item)) {
             int count = inventory.get(item);
-            put(item, count - 1);
+            if (count == 1) {
+                inventory.remove(item);
+            } else {
+                put(item, count - 1);
+            }
         }
     }
 

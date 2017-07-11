@@ -3,28 +3,28 @@ package models;
 import java.util.List;
 
 public class Billing {
-    private Product p;
+    private List<Product> selectedProducts;
 
     private List<Coin> change;
 
-    public Billing(Product p, List<Coin> change) {
-        this.p = p;
+    public Billing(List<Product> selectedProducts, List<Coin> change) {
+        this.selectedProducts = selectedProducts;
         this.change = change;
     }
 
-    public Product getP() {
-        return p;
+    public List<Product> getSelectedProducts() {
+        return selectedProducts;
+    }
+
+    public void setSelectedProducts(List<Product> selectedProducts) {
+        this.selectedProducts = selectedProducts;
     }
 
     public List<Coin> getChange() {
         return change;
     }
 
-    @Override
-    public String toString() {
-        return "Billing{" +
-                "p=" + p +
-                ", change=" + change +
-                '}';
+    public void setChange(List<Coin> change) {
+        this.change = change;
     }
 }

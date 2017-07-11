@@ -6,4 +6,6 @@ public interface State {
     void pressButton() throws RuntimeException;
 
     void dispense() throws RuntimeException;
+
+    void alter() throws RuntimeException;
 }

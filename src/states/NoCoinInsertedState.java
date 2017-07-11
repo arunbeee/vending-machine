@@ -24,6 +24,11 @@ public class NoCoinInsertedState implements State {
     }
 
     public void dispense() throws RuntimeException {
-        throw new RuntimeException(CustomException.CANNOT_PROCESS.getMessage());
+        throw new RuntimeException(CustomException.PENDING_PAYMENT.getMessage());
     }
+
+    public void alter() throws RuntimeException {
+
+    }
+
 }

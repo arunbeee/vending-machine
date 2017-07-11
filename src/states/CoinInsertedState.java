@@ -22,5 +22,9 @@ public class CoinInsertedState implements State {
     public void pressButton() throws RuntimeException {
         machine.setMachineState(machine.getDispensingState());
     }
+
+    public void alter() throws RuntimeException {
+        throw new RuntimeException(CustomException.COIN_INSERTED.getMessage());
+    }
 }
 
