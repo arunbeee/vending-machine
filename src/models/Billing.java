@@ -27,4 +27,12 @@ public class Billing {
     public void setChange(List<Coin> change) {
         this.change = change;
     }
+
+    @Override
+    public String toString() {
+        return "Bill {" +
+                "selectedProducts=" + selectedProducts +
+                ", change=" + change +
+                '}';
+    }
 }

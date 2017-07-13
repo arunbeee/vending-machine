@@ -24,7 +24,7 @@ public class CoinInsertedState implements State {
     }
 
     public void alter() throws RuntimeException {
-        throw new RuntimeException(CustomException.COIN_INSERTED.getMessage());
+        throw new RuntimeException(CustomException.PAYMENT_IN_PROGRESS.getMessage());
     }
 }
 

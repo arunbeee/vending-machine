@@ -84,11 +84,7 @@ public class ConcurrentVendingMachine implements VendingMachine {
     //Vending machine defaults
     @Override
     public Set<Product> getAvailableProducts() {
-        Set<Product> productSet = productInventory.getItems();
-        for (Product p : productSet) {
-            System.out.println("Product " + p.getName() + ", Price " + p.getPrice());
-        }
-        return productSet;
+        return new HashSet<>(productInventory.getItems());
     }
 
     @Override
